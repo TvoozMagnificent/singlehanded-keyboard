@@ -1,5 +1,5 @@
 {
-  "title": "mirrorboard-mac",
+  "title": "singlehanded-keyboard",
   "rules": [
     {
       "description": "A one-handed layout keyboard layout. The modifier key is the accent",
@@ -59,7 +59,7 @@
           ],
           "to_if_alone": [
             {
-              "key_code": "grave_accent_and_tilde"
+              "key_code": "non_us_backslash"
             }
           ],
           "type": "basic"
@@ -74,27 +74,6 @@
           "to": [
             {
               "key_code": "grave_accent_and_tilde"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "mirror",
-              "value": 1
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "grave_accent_and_tilde",
-            "modifiers": {
-              "optional": ["any"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "delete_or_backspace"
             }
           ],
           "conditions": [
@@ -1062,6 +1041,27 @@
           "to": [
             {
               "key_code": "z"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mirror",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
             }
           ],
           "conditions": [
